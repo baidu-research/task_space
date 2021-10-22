@@ -1,0 +1,53 @@
+This folder includes all code to reproduce
+1. estimation of kappa shown in fig.1, fig.2
+2. all results in fig.3, and tab. 2
+
+
+For 1.:
+
+1) First we have to extract contextualized word embeddings for all checkpoints. 
+This may take a while and quite a bit disk space
+
+    cd estimate_kappa;
+    ./extract.sh text/wiki.train.len_noLess_10.tokens your/feature/path
+
+2) Then we can compute kappa among all 34 checkpoints
+
+    python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2.all.npy
+    
+   fig.1 can be produced by
+
+    python show_dendrogram.py kappa.wiki2.all.npy ../ckpts.txt 
+
+3) We can also estimate kappa using only a subset of probing data, e.g.,
+    
+    python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2.all.npy --max-sentence 128
+
+   Then we can check how quickly kappa converges w.r.t. number of words in probe data (fig. 2)
+    python convergence.py --data wikitext2 --metric kl --iso
+
+    
+For 2.:
+The train-valid-test data for all tasks can be downloaded by
+
+    cd probe_tasks;
+    ./get_data.sh
+
+1) First prepare word representations for these tasks
+    cd probe_tasks;
+    ./prepare_contextualizer.sh $one_of_the_34_ckpt  #e.g., bert-large-cased
+
+   This should take a while. A folder named as "contextualizers" should be created
+   Inside it are word representations by each checkpoint, and for every task
+
+   For your convenience, we have provided all pre-extracted features, using all ckpts on each task.
+   Simply run
+    ./get_extracted_featues.sh
+
+2) Then we can run jobs for each task, e.g.,
+    ./pos-ptb.sh
+    This will create some job logs under task_logs/pos-ptb
+
+   The other tasks can be launched in the same way.
+
+3) Run ./fig3.sh to produce fig.3

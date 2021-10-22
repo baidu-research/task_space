@@ -1,0 +1,4 @@
+semantic_tagging.hdf5 data/semantic_tagging/semtag_sentences.txt
+grammatical_error_correction.hdf5 data/grammatical_error_correction/fce_sentences.txt
+syntactic_constituency.hdf5 data/syntactic_constituency/wsj_sentences.txt
+ptb_pos.hdf5 data/pos/wsj_sentences.txt
