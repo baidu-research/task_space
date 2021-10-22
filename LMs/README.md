@@ -35,7 +35,7 @@ python convergence.py --data wikitext2 --metric kl --iso
 ### 2. All results in fig.3, and tab. 2
 The train-valid-test data for all tasks can be downloaded by
 ```
-cd probe_tasks;
+cd probe_tasks
 ./get_data_and_features.sh
 ```
 
@@ -48,7 +48,7 @@ Inside it are word representations by each checkpoint, and for every task.
 
 For your convenience, we have provided all pre-extracted features, using all ckpts on each task. Running `./get_data_and_features.sh` should already download these pre-extracted features under `contextualizers`.
 
-2) Then we can run jobs for each task, e.g.,
+2) Then we can run jobs for each task,
  ```
  ./chuncking.sh
  ./ner.sh
