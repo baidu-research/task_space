@@ -1,4 +1,4 @@
-#This folder includes all code to reproduce the Results in Section 5.2
+# This folder includes all code to reproduce the Results in Section 5.2
 
 Imaging an admin that has to handle many new tasks, each an N-way classification problem.
 Each task has a small amount of S training data (e.g., 20) per class.
