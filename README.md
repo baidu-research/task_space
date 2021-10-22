@@ -3,9 +3,9 @@
 <p align="left">
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/08/Logo_for_Conference_on_Neural_Information_Processing_Systems.svg/1200px-Logo_for_Conference_on_Neural_Information_Processing_Systems.svg.png" width=200>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
-<img src="imgs/baidu-research-logo.png" width="220">
+<img src="pics/baidu-research-logo.png" width="220">
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp
-<img src="imgs/purdue_logo.png" width="150">
+<img src="pics/purdue_logo.png" width="150">
 </p>
 
 This repo includes code to reproduce all results in the above Neurips paper.
