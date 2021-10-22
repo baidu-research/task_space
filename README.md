@@ -20,4 +20,15 @@ We used cuda 10.2.89, but any version that meets pytorch's requirement should al
 
 ## Experiments
 check LMs/README.md for reproducing results on computational linguistics
+
 check vision/README.md for reproducing results on computer vision
+
+*Note:* This project requires running many small jobs. So it will be very useful if you have a cluster powered by slurm, which can launch jobs in parallel. Therefore in the job-launching scripts, you can see multiple commands like
+```
+sbatch -p $partition --gres=gpu:1 --wrap "python run.py" -o $job_log_path
+```
+If you do not have such a cluster, just use
+```
+python run.py > $job_log_path
+```
+instead.
