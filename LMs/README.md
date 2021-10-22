@@ -1,11 +1,11 @@
-## This folder includes all code to reproduce
+# This folder includes all code to reproduce
 
-### 1. Estimation of ![formula](https://render.githubusercontent.com/render/math?math=\kappa) shown in fig.1, fig.2
+## 1. Estimation of ![formula](https://render.githubusercontent.com/render/math?math=\kappa) shown in fig.1, fig.2
 For your convenience, we provide our estimated ![formula](https://render.githubusercontent.com/render/math?math=\kappa) at `estimate_kappa/kappa.wiki2-train-noless-10.npy`
 
 ![formula](https://render.githubusercontent.com/render/math?math=\kappa) is the input to step 2. If you are eager to get results in step 2, just use our estimate of ![formula](https://render.githubusercontent.com/render/math?math=\kappa) and ignore the remaining of this section.
 
-#### Details on estimating ![formula](https://render.githubusercontent.com/render/math?math=\kappa)
+### Details on estimating ![formula](https://render.githubusercontent.com/render/math?math=\kappa)
 
 1) First we have to extract contextualized word embeddings for all checkpoints. 
 This may take a while and quite a bit disk space
@@ -32,7 +32,7 @@ Then we can check how quickly ![formula](https://render.githubusercontent.com/re
 python convergence.py --data wikitext2 --metric kl --iso
 ```
     
-### 2. All results in fig.3, and tab. 2
+## 2. All results in fig.3, and tab. 2
 The train-valid-test data for all tasks can be downloaded by
 ```
 cd probe_tasks
