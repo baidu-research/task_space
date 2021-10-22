@@ -1,0 +1,4 @@
+torch==1.9.0
+transformers==4.9.2
+allennlp==2.7.0
+matplotlib==3.3.4
