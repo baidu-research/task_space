@@ -42,7 +42,9 @@ We **hypothesize** that **reprentative** tasks are more **generalizable** to new
 
 So, how to identify **reprentative** tasks? They are supposed to convey the most information about the rest of the task space. Therefore, let ![formula](https://render.githubusercontent.com/render/math?math=S) be the set of reprentative tasks, we want
 
-![formula](https://render.githubusercontent.com/render/math?math=\max_SI)
+```math
+\max_S I(S;\bar S)
+```
 
 ### Linguistic Tasks
 
