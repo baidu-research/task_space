@@ -49,7 +49,7 @@ Using the 34x34 covariance matrix, we can identify that the 5 most representativ
 <img src="pics/chunking.png" width=300>
 </p>
 
-Check [LMs/README.md](LMs/README.md) for reproducing full results on computational linguistics.
+To reproduce full results, check [LMs/README.md](LMs/README.md) for details.
 
 
 #### Computer Vision Tasks
@@ -58,7 +58,7 @@ The observation holds for vision tasks too. Below is an experiment set up on cif
 <img src="pics/cifar100_gain.png" width=300>
 </p>
 
-Check [vision/README.md](vision/README.md) for reproducing results on computer vision.
+To reproduce all results, check [vision/README.md](vision/README.md) for details.
 
 ## Additional Comments
 ***Note:*** This project requires running many small jobs. So it will be very useful if you have a cluster powered by slurm, which can launch jobs in parallel. In the job-launching scripts, you can see multiple commands like
