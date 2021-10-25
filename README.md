@@ -38,7 +38,7 @@ To reproduce the above figure, refer to [LMs/README.md](LMs/README.md).
 
 ### Exploit the Task Space
 
-We **hypothesize** that **representative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true (See the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.)
+We **hypothesize** that **representative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true, as indicated by the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.
 
 So, how to identify **reprentative** tasks? They are supposed to convey the most information about the rest of the task space. We formulate the problem into a Max-Mutual-Information (**MMI**) objective. The solver takes the covariance as input, and greedily picks reprentative tasks.
 
