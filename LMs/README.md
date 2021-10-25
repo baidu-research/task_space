@@ -37,11 +37,8 @@ python convergence.py --data wikitext2 --metric kl --iso
 ```
     
 ## 2. All results in fig.3, and tab. 2
-The train-valid-test data for all tasks can be downloaded by
-```
-cd probe_tasks
-./get_data_and_features.sh
-```
+The train-valid-test data for all tasks can be downloaded from [here](https://drive.google.com/file/d/1uI581M_CqGDJhuSG9JXe-4tT-CwscJw9/view?usp=sharing).
+Suppose you put the unziped data dirs into probe_tasks/data. The following is the recipe.
 
 1) First prepare word representations for these tasks
 ```
