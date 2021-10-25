@@ -36,7 +36,7 @@ In the paper, we model the tasks as following a Gaussian process. Its covariance
 
 To reproduce the above figure, refer to [LMs/README.md](LMs/README.md).
 
-#### Exploit the Task Space
+### Exploit the Task Space
 
 We **hypothesize** that **representative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true, as indicated by the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.
 
@@ -52,7 +52,7 @@ Using the 34x34 covariance matrix, we can identify that the 5 most representativ
 Check [LMs/README.md](LMs/README.md) for reproducing full results on computational linguistics.
 
 
-### Computer Vision Tasks
+#### Computer Vision Tasks
 The observation holds for vision tasks too. Below is an experiment set up on cifar100. MMI shows steady gain over random selection, and outperforms another baseline.
 <p align="center">
 <img src="pics/cifar100_gain.png" width=300>
