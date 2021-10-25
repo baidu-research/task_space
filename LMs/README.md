@@ -1,6 +1,6 @@
 # This folder includes all code to reproduce
 
-## 1. Estimation of ![formula](https://render.githubusercontent.com/render/math?math=\kappa) shown in fig.1, fig.2
+## 1. Estimation of Covariance ![formula](https://render.githubusercontent.com/render/math?math=\kappa) shown in fig.1, fig.2
 For your convenience, we provide our estimated ![formula](https://render.githubusercontent.com/render/math?math=\kappa) at `estimate_kappa/kappa.wiki2-train-noless-10.npy`
 
 ![formula](https://render.githubusercontent.com/render/math?math=\kappa) is the input to step 2. If you are eager to get results in step 2, just use our estimate of ![formula](https://render.githubusercontent.com/render/math?math=\kappa) and ignore the remaining of this section.
