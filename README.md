@@ -8,7 +8,7 @@
 <img src="pics/purdue_logo.png" width=150>
 </p>
 
-This repo includes code to reproduce all results in the above Neurips paper.
+This repo includes code to reproduce all results in the above Neurips paper, authored by [Jiaji Huang](https://jiaji-huang.github.io/), [Qiang Qiu](https://web.ics.purdue.edu/~qqiu/) and [Kenneth Church](https://scholar.google.com/citations?user=E6aqGvYAAAAJ&hl=en).
 
 ## Dependencies
 We used python 3.8.5, but other versions close to that should also work. Install all required packages by
