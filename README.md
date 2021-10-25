@@ -23,7 +23,7 @@ We used cuda 10.2.89, but any version that meets pytorch's requirement should al
 
 We highlight some major results, so that readers do not have to read the paper to grasp the main ideas. Concisely, the paper tries to answer the question:	
 
-*"Can we use a checkpoint zoo to build something that can adapt to unseen tasks?"*
+*"Can we use a checkpoint zoo to build something that better adapts to unseen tasks?"*
 
 To answer the question, first we need to understand the geometry of a space of tasks.
 
