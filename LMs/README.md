@@ -24,7 +24,7 @@ python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2-train-noless
 ```
 Fig.1 can be produced by
 ```
-python show_dendrogram.py kappa.wiki2.all.npy ../ckpts.txt
+python show_dendrogram.py kappa.wiki2-train-noless-10.npy ../ckpts.txt
 ```
 
 3) We can also estimate ![formula](https://render.githubusercontent.com/render/math?math=\kappa) using only a subset of probing data, e.g.,
