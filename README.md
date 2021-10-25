@@ -21,7 +21,7 @@ We used cuda 10.2.89, but any version that meets pytorch's requirement should al
 
 ## Highlight of Results
 
-We highlight some major results in the paper. A reader does not have to read the paper to grasp the main ideas. The paper tries to answer the question
+We highlight some major results in the paper. A reader does not have to read the paper to grasp the main ideas. The paper tries to answer the question:	
 
 *"Can we use the checkpoint zoo to build something that can adapt to unseen tasks?"*
 
@@ -38,24 +38,29 @@ To reproduce the above figure, refer to [LMs/README.md](LMs/README.md).
 
 ### Exploit the Task Space
 
-We **hypothesize** that **reprentative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true (See the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.)
+We **hypothesize** that **representative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true (See the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.)
 
-So, how to identify **reprentative** tasks? They are supposed to convey the most information about the rest of the task space. Therefore, let ![formula](https://render.githubusercontent.com/render/math?math=S) be the set of reprentative tasks, we want
-
-$\max_S I(S;\bar S)$
+So, how to identify **reprentative** tasks? They are supposed to convey the most information about the rest of the task space. We formulate the problem into a Max-Mutual-Information (**MMI**) objective. The solver takes the covariance as input, and greedily picks reprentative tasks.
 
 ### Linguistic Tasks
 
-Hello
+Using the 34x34 covariance matrix, we can identify the 5 most representative tasks are those corresponding to roberta-base, distilbert-base-uncased, t5-base, bert-base-cased and bart-large. Combining these checkpoints yields superior results on 8 new linguistic tasks, e.g., below is an example on chunking task.
+<p align="center">
+<img src="pics/chunking.png" width=300>
+</p>
+
+Check [LMs/README.md](LMs/README.md) for reproducing full results on computational linguistics.
+
 
 ### Computer Vision Tasks
+The observation holds for vision tasks too. Below is an experiment set up on cifar100. MMI shows steady gain over random selection, and outperforms another baseline.
+<p align="center">
+<img src="pics/cifar100_gain.png" width=300>
+</p>
 
-Hello again
+Check [vision/README.md](vision/README.md) for reproducing results on computer vision
 
-Check LMs/README.md for reproducing results on computational linguistics.
-
-Check vision/README.md for reproducing results on computer vision
-
+## Additional Comments
 ***Note:*** This project requires running many small jobs. So it will be very useful if you have a cluster powered by slurm, which can launch jobs in parallel. Therefore in the job-launching scripts, you can see multiple commands like
 ```
 sbatch -p $partition --gres=gpu:1 --wrap "python run.py" -o $job_log_path
