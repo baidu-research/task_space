@@ -10,6 +10,10 @@ For your convenience, we provide our estimated ![formula](https://render.githubu
 1) First we have to extract contextualized word embeddings for all checkpoints. 
 This may take a while and quite a bit disk space
 ```
+mkdir text
+curl https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-2-v1.zip --output text/wikitext-2-v1.zip
+unzip text/wikitext-2-v1.zip -d text
+awk 'NF>=10' text/wikitext-2/wiki.train.tokens > text/wiki.train.len_noLess_10.tokens
 cd estimate_kappa;
 ./extract.sh text/wiki.train.len_noLess_10.tokens your/feature/path
 ```
