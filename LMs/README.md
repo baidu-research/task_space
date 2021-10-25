@@ -20,7 +20,7 @@ cd estimate_kappa;
 
 2) Then we can compute ![formula](https://render.githubusercontent.com/render/math?math=\kappa) among all 34 checkpoints
 ```
-python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2.all.npy
+python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2-train-noless-10.npy
 ```
 Fig.1 can be produced by
 ```
@@ -29,7 +29,7 @@ python show_dendrogram.py kappa.wiki2.all.npy ../ckpts.txt
 
 3) We can also estimate ![formula](https://render.githubusercontent.com/render/math?math=\kappa) using only a subset of probing data, e.g.,
 ```
-python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2.all.npy --max-sentence 128
+python estimate_kappa.py your/feature/path ../ckpts.txt kappa.wiki2-train-noless-10.npy --max-sentence 128
 ```
 Then we can check how quickly ![formula](https://render.githubusercontent.com/render/math?math=\kappa) converges w.r.t. number of words in probe data (fig. 2)
 ```
