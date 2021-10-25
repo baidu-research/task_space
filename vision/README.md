@@ -15,4 +15,4 @@ Download cifar100 by
 cd images;
 ./download_data.sh;
 ```
-All experimental pipeline are included in `./exp.sh`. You are suggested to run it code block by code block to get the result in fig.4
+All experimental pipeline are included in `./exp.sh`. You are suggested to run it code block by code block to get the results in fig.4 to 6.
