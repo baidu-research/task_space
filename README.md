@@ -36,13 +36,13 @@ In the paper, we model the tasks as following a Gaussian process. Its covariance
 
 To reproduce the above figure, refer to [LMs/README.md](LMs/README.md).
 
-### Exploit the Task Space
+#### Exploit the Task Space
 
 We **hypothesize** that **representative** tasks are more **generalizable** to new tasks. This, of course, needs a rigorious mathematical proof. But empirically we find it is true, as indicated by the experiments on [NLP](#Linguistic-Tasks) and [vision](#Computer-Vision-Tasks) tasks.
 
 So, how to identify **reprentative** tasks? They are supposed to convey the most information about the rest of the task space. We formulate the problem into a Max-Mutual-Information (**MMI**) objective. The solver takes the covariance as input, and greedily picks reprentative tasks.
 
-### Linguistic Tasks
+#### Linguistic Tasks
 
 Using the 34x34 covariance matrix, we can identify that the 5 most representative tasks are those corresponding to roberta-base, distilbert-base-uncased, t5-base, bert-base-cased and bart-large. Combining these checkpoints yields superior results on 8 new linguistic tasks, e.g., below is an example of chunking task.
 <p align="center">
