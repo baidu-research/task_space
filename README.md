@@ -21,7 +21,7 @@ We used cuda 10.2.89, but any version that meets pytorch's requirement should al
 
 ## Highlight of Results
 
-We highlight some major results in the paper. A reader does not have to read the paper to grasp the main ideas. The paper tries to answer the question:	
+We highlight some major results so that a reader does not have to read the paper to grasp the main ideas. The paper tries to answer the question:	
 
 *"Can we use a checkpoint zoo to build something that can adapt to unseen tasks?"*
 
