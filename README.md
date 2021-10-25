@@ -44,7 +44,7 @@ So, how to identify **reprentative** tasks? They are supposed to convey the most
 
 ### Linguistic Tasks
 
-Using the 34x34 covariance matrix, we can identify the 5 most representative tasks are those corresponding to roberta-base, distilbert-base-uncased, t5-base, bert-base-cased and bart-large. Combining these checkpoints yields superior results on 8 new linguistic tasks, e.g., below is an example on chunking task.
+Using the 34x34 covariance matrix, we can identify the 5 most representative tasks are those corresponding to roberta-base, distilbert-base-uncased, t5-base, bert-base-cased and bart-large. Combining these checkpoints yields superior results on 8 new linguistic tasks, e.g., below is an example of chunking task.
 <p align="center">
 <img src="pics/chunking.png" width=300>
 </p>
