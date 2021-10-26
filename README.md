@@ -29,7 +29,7 @@ To answer the question, first we need to understand the geometry of a space of t
 
 ### Characterize the Task Space
 
-In the paper, we model the tasks as following a Gaussian process. Its covariance is computed by applying [kernel alignment](https://proceedings.neurips.cc/paper/2001/file/1f71e393b3809197ed66df836fe833e5-Paper.pdf) to extracted features. The features are obtained by inputting probe data into checkpoints, each was trained for a task. For example, using 34 checkpoints from [Huggingface models](https://huggingface.co/models), we can estimate the 34x34 covariance (of their corresponding tasks).
+In the paper, we model the tasks as following a Gaussian process. Its covariance is computed by applying [kernel alignment](https://proceedings.neurips.cc/paper/2001/file/1f71e393b3809197ed66df836fe833e5-Paper.pdf) to extracted features. The features are obtained by inputting probe data into checkpoints, each trained for a task. For example, using 34 checkpoints from [Huggingface models](https://huggingface.co/models), we can estimate the 34x34 covariance (of their corresponding tasks).
 <p align="center">
 <img src="pics/dendrogram.png" width=500>
 </p>
